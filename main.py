@@ -49,8 +49,8 @@ def get_exchange_rates(req: ExchangeRatesRequest, token: dict = Depends(verify_j
     if not BAM_API_KEY:
         raise HTTPException(status_code=500, detail="BAM_API_KEY environment variable is not configured.")
     
-    # BAM API base URL (placeholder, adapt to actual BAM portal documentation)
-    url = "https://api.centralbankofmorocco.ma/v1/exchange-rates"
+    # BAM API base URL
+    url = "https://api.centralbankofmorocco.ma/cours/Version1/api/CoursBBE"
     headers = {
         "Ocp-Apim-Subscription-Key": BAM_API_KEY,
         "Accept": "application/json"
@@ -58,7 +58,7 @@ def get_exchange_rates(req: ExchangeRatesRequest, token: dict = Depends(verify_j
     
     params = {}
     if req.currency:
-        params["currency"] = req.currency
+        params["libDevise"] = req.currency
     if req.date:
         params["date"] = req.date
 

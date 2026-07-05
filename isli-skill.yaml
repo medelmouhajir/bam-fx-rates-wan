@@ -2,7 +2,7 @@ isli_version: "2.0"
 id: "bam-fx-rates-wan"
 name: "Bank Al-Maghrib Exchange Rates"
 description: "Fetches live Moroccan Dirham (MAD) exchange rates and monetary statistics from the Central Bank of Morocco (BAM)."
-version: "1.0.0"
+version: "1.0.1"
 author: "ISLI Community"
 category: "finance"
 
